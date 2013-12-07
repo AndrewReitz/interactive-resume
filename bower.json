@@ -1,0 +1,7 @@
+{
+  "name": "bootstrap",
+  "version": "3.0.3",
+  "dependencies": {
+    "reveal.js": "~2.6.1"
+  }
+}
