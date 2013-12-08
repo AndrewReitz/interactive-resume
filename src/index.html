@@ -13,15 +13,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.min.css">
-    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/night.css" id="night">
+    <link rel="stylesheet" href="lib/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="lib/reveal.js/css/theme/night.css" id="night">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="../bower_components/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/reveal.js/lib/css/zenburn.css">
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
-        document.write('<link rel="stylesheet" href="../bower_components/reveal.js/css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+        document.write('<link rel="stylesheet" href="lib/reveal.js/css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
     </script>
 
     <!--[if lt IE 9]>
@@ -32,7 +33,7 @@
 <div class="reveal">
 <!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
-<section> <!-- TODO: Add Android Logo! -->
+<section>
     <h1><a href="//andrewreitz.com">Andrew Reitz</a></h1>
 
     <h3>Android Developer @ <a href="//nerdery.com/people#rz">The Nerdery</a></h3>
@@ -75,7 +76,7 @@
         <h2>Key Skills</h2>
 
         <h1>Software</h1>
-        <ul> <!-- TODO: Add logos in if possible seperate into two side by side lists -->
+        <ul>
             <li>IntelliJ</li>
             <li>Visual Studio</li>
             <li>node.js</li>
@@ -262,18 +263,30 @@
 <section>
     <h1>Find Me</h1>
 
-    <h3><a href="mailto:andrew@andrewreitz.com">Email</a></h3>
+    <h3>
+        <img class="logo" src="image/email.png" height="40" width="40" alt="Email Icon">
+        <a href="mailto:andrew@andrewreitz.com">Email</a>
+    </h3>
 
-    <h3><a href="//github.com/pieces029">GitHub</a></h3>
+    <h3>
+        <img class="logo" src="image/github.png" height="40" width="40" alt="Github Icon">
+        <a href="//github.com/pieces029">GitHub</a>
+    </h3>
 
-    <h3><a href="//plus.google.com/+AndrewReitz">Google+</a></h3>
+    <h3>
+        <img class="logo" src="image/googleplus-revised.png" height="40" width="40" alt="Google+ Icon">
+        <a href="//plus.google.com/+AndrewReitz">Google+</a>
+    </h3>
 
-    <h3><a href="//twitter.com/andrewreitz_">Twitter</a></h3>
+    <h3>
+        <img class="logo" src="image/twitter.png" height="40" width="40" alt="Twitter Icon">
+        <a href="//twitter.com/andrewreitz_">Twitter</a>
+    </h3>
 </section>
 </div>
 
-<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
-<script src="../bower_components/reveal.js/js/reveal.min.js"></script>
+<script src="lib/reveal.js/lib/js/head.min.js"></script>
+<script src="lib/reveal.js/js/reveal.min.js"></script>
 
 <script>
     Reveal.initialize({
@@ -290,25 +303,25 @@
         // Optional libraries used to extend on reveal.js
         dependencies: [
             {
-                src: 'bower_components/reveal.js/lib/js/classList.js',
+                src: 'lib/reveal.js/lib/js/classList.js',
                 condition: function () {
                     return !document.body.classList;
                 }
             },
             {
-                src: 'bower_components/reveal.js/plugin/markdown/marked.js',
+                src: 'lib/reveal.js/plugin/markdown/marked.js',
                 condition: function () {
                     return !!document.querySelector('[data-markdown]');
                 }
             },
             {
-                src: 'bower_components/reveal.js/plugin/markdown/markdown.js',
+                src: 'lib/reveal.js/plugin/markdown/markdown.js',
                 condition: function () {
                     return !!document.querySelector('[data-markdown]');
                 }
             },
             {
-                src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
+                src: 'lib/reveal.js/plugin/highlight/highlight.js',
                 async: true,
                 callback: function () {
                     hljs.initHighlightingOnLoad();

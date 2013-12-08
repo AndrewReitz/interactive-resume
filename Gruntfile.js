@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
             livereload: {
-                files: ['index.html'],
+                files: ['src/index.html'],
                 tasks: 'htmllint',
                 options: {
                     livereload: true
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
             server: {
                 options: {
                     port: 8888,
-                    base: '.',
+                    base: 'src',
                     keepalive: true,
                     hostname: '127.0.0.1',
                     livereload: true
@@ -38,12 +38,12 @@ module.exports = function (grunt) {
         },
         open: {
             dev: {
-                path: 'http://127.0.0.1:8888/index.html',
+                path: 'http://127.0.0.1:8888',
                 app: 'google-chrome'
             }
         },
         htmllint: {
-            all: ["index.html"]
+            all: ["src/index.html"]
         }
     });
 
