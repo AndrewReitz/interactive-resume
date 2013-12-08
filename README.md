@@ -6,5 +6,3 @@ You must have npm and bower installed
 Then run
     npm install
     bower install
-
-If you
