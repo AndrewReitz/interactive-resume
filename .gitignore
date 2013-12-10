@@ -43,3 +43,5 @@ tramp
 
 # elpa packages
 /elpa/
+
+.directory
