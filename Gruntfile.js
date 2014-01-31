@@ -50,13 +50,6 @@ module.exports = function (grunt) {
         htmllint: {
             all: ["src/index.html"]
         },
-        smoosher: {
-            all: {
-                files: {
-                    'dist/index.html': 'src/index.html'
-                }
-            }
-        },
         imagemin: {
             dynamic: {
                 files: [
@@ -77,12 +70,10 @@ module.exports = function (grunt) {
         },
         copy: {
             release: {
-                files: [
-                    {src: ['src/lib/reveal.js/lib/js/classList.js'], dest: 'dist/lib/reveal.js/lib/js/classList.js'},
-                    {src: ['src/lib/reveal.js/plugin/highlight/highlight.js'], dest: 'dist/lib/reveal.js/plugin/highlight/highlight.js'},
-                    {src: ['src/lib/reveal.js/css/print/paper.css'], dest: 'dist/lib/reveal.js/css/print/paper.css'},
-                    {src: ['src/lib/reveal.js/css/print/pdf.css'], dest: 'dist/lib/reveal.js/css/print/pdf.css'}
-                ]
+                expand: true,
+                cwd: 'src/',
+                src: '**',
+                dest: 'dist/'
             }
         },
         html_minify: {
@@ -96,6 +87,16 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        githubPages: {
+            target: {
+                options: {
+                    // The default commit message for the gh-pages branch
+                    commitMessage: 'updated site'
+                },
+                // The folder where your gh-pages repo is
+                src: 'dist'
+            }
         }
     });
 
@@ -107,9 +108,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-html');
-    grunt.loadNpmTasks('grunt-html-smoosher');
     grunt.loadNpmTasks('grunt-bumpup');
     grunt.loadNpmTasks('grunt-html-minify');
+    grunt.loadNpmTasks('grunt-github-pages');
 
 
     // Default task
@@ -130,10 +131,16 @@ module.exports = function (grunt) {
     grunt.registerTask('build', 'Creates the release file in the dist folder',
         [
             'copy:release',
-            'smoosher',
             'imagemin',
             'html_minify',
             'bumpup'
+        ]
+    );
+
+    grunt.registerTask('release', 'Runs build and then publishes it to github pages',
+        [
+            'build',
+            'githubPages:target'
         ]
     );
 };

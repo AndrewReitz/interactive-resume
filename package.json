@@ -1,11 +1,11 @@
 {
   "name": "Andrew-Reitz-Interactive-Resume",
   "description": "My resume in an awesome format",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "author": "Andrew Reitz",
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.org/pieces029/dagger-presentation.git"
+    "url": "git@github.com:pieces029/resume.git"
   },
   "engines": {
     "node": "0.10.22"
@@ -17,11 +17,11 @@
     "grunt-open": "~0.2.2",
     "grunt-html": "~0.3.4",
     "grunt-concurrent": "~0.4.2",
-    "grunt-html-smoosher": "~0.1.1",
     "grunt-contrib-imagemin": "~0.4.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-bumpup": "~0.4.2",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-html-minify": "~0.3.1"
+    "grunt-html-minify": "~0.3.1",
+    "grunt-github-pages": "0.0.4"
   }
 }
