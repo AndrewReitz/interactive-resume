@@ -88,15 +88,11 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        githubPages: {
-            target: {
-                options: {
-                    // The default commit message for the gh-pages branch
-                    commitMessage: 'updated site'
-                },
-                // The folder where your gh-pages repo is
-                src: 'dist'
-            }
+        'gh-pages': {
+            options: {
+              base: 'dist'
+            },
+            src: ['**']
         }
     });
 
@@ -110,7 +106,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-html');
     grunt.loadNpmTasks('grunt-bumpup');
     grunt.loadNpmTasks('grunt-html-minify');
-    grunt.loadNpmTasks('grunt-github-pages');
+    grunt.loadNpmTasks('grunt-gh-pages');
 
 
     // Default task
@@ -140,7 +136,7 @@ module.exports = function (grunt) {
     grunt.registerTask('release', 'Runs build and then publishes it to github pages',
         [
             'build',
-            'githubPages:target'
+            'gh-pages'
         ]
     );
 };
