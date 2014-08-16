@@ -1,8 +1,1 @@
-# Andrew Reitz Resume (12/7/2013)
-## By Andrew Reitz
-
-### Setup
-You must have npm and bower installed
-Then run
-    npm install
-    bower install
+# Andrew Reitz Resume (8/15/2014)
