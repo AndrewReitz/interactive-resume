@@ -1,6 +1,6 @@
 {
   "name": "bootstrap",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "dependencies": {
     "reveal.js": "~2.6.1"
   }
